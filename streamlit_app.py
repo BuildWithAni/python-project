@@ -96,7 +96,7 @@ if page == "Manage Students":
                     key=f"{subject}_{key_suffix}",
                 )
             submitted = st.form_submit_button(
-                "Add / Update Student", use_container_width=True
+                "Add / Update Student", width="stretch"
             )
 
         if submitted:
@@ -168,7 +168,7 @@ if page == "Manage Students":
             st.dataframe(
                 visible_df.style.apply(colour_result, axis=1),
                 hide_index=True,
-                use_container_width=True,
+                width="stretch",
             )
 
         st.download_button(
@@ -176,7 +176,7 @@ if page == "Manage Students":
             full_df.to_csv(index=False).encode("utf-8"),
             file_name="students_report.csv",
             mime="text/csv",
-            use_container_width=True,
+            width="stretch",
         )
 
 
@@ -199,7 +199,7 @@ elif page == "Dashboard":
     st.pyplot(build_figure(df))
 
     with st.expander("View the data table"):
-        st.dataframe(df, hide_index=True, use_container_width=True)
+        st.dataframe(df, hide_index=True, width="stretch")
 
 
 # ----------------------------------------------------- presentation guide
