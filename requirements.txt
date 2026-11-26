@@ -1,0 +1,5 @@
+# Tkinter is part of the Python standard library (no install needed on Windows).
+pandas>=2.0
+matplotlib>=3.7
+numpy>=1.24
+streamlit>=1.30
